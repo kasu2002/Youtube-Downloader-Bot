@@ -21,7 +21,7 @@ def create_buttons(quailitylist):
 
 # extract Youtube info
 def extractYt(yturl):
-    ydl = youtube_dl.YoutubeDL()
+    ydl = youtube_dl.SLYoutube()
     with ydl:
         qualityList = []
         r = ydl.extract_info(yturl, download=False)
@@ -44,7 +44,7 @@ def extractYt(yturl):
 #         'noplaylist': True,
 #         'progress_hooks': [custom_progress],
 #     }
-#     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+#     with youtube_dl.SLYoutube(ydl_opts) as ydl:
 #         ydl.download([url])
 
 
